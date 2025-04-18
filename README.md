@@ -60,7 +60,6 @@ Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1
 |--------------|----------------|
 | ![Antes](img/captura-pfo1.png) | ![Después](img/captura-pfo2.png) |
 
-> 💡 *Agregá tus capturas a la carpeta `/img/` para mostrar los cambios visuales.*
 
 ---
 
