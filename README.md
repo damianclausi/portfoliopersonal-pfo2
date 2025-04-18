@@ -1,7 +1,14 @@
 # 🎓 IFTS 29 - Tecnicatura en Desarrollo de Software  
-## 💻 Desarrollo de Sistemas Web Frontend - PFO 1
 
-📘 **Práctica Formativa Obligatoria 1** – Trabajo individual correspondiente a la materia Desarrollo de Sistemas Web Frontend.
+# 💻 Desarrollo de Sistemas Web Frontend
+
+---
+
+# 📄 PFO2 - Landing Page Interactiva
+
+Este proyecto es una mejora de la landing page desarrollada en la PFO1. En esta segunda etapa se incorporarán **funcionalidades interactivas con JavaScript** y se aplicarán **mejoras en el diseño y la estructura** del sitio.
+
+---
 
 👤 **Alumno:** Damián Clausi  
 🧑‍🏫 **Profesor:** Luciano Martinez  
@@ -9,115 +16,75 @@
 
 ---
 
-## 🌐 Landing Page de Portafolio Personal
+## 🧠 Funcionalidades con JavaScript
 
-Este proyecto consiste en una **landing page personal** desarrollada con HTML y CSS.  
-Incluye una estructura web semántica, diseño responsivo y secciones como:
+Se implementarán las siguientes 5 funcionalidades con JavaScript:
 
-- 🙋‍♂️ Sobre mí  
-- 🧠 Habilidades  
-- 💼 Proyectos  
-- 🎬 Películas favoritas  
-- 📬 Contacto  
+1. **[Nombre de la funcionalidad 1]**
+   - **Descripción**:  
+   - ✅ *Justificación:*
 
----
+2. **[Nombre de la funcionalidad 2]**
+   - **Descripción**:  
+   - ✅ *Justificación:*
 
-## 🔗 Enlaces del Proyecto
+3. **[Nombre de la funcionalidad 3]**
+   - **Descripción**:  
+   - ✅ *Justificación:*
 
-- 📁 [Repositorio en GitHub](https://github.com/damianclausi/portfoliopersonal)  
-- 🌍 [Sitio en GitHub Pages](https://damianclausi.github.io/portfoliopersonal/)  
+4. **[Nombre de la funcionalidad 4]**
+   - **Descripción**:  
+   - ✅ *Justificación:*
 
----
-
-## ✅ Checklist PFO 1
-
-### 📁 Estructura del Proyecto
-
-- [x] `index.html` en la raíz
-- [x] Carpeta `css` con `styles.css`
-- [x] Carpeta `img` con recursos gráficos
-- [x] Archivo `README.md` con descripción y checklist
+5. **[Nombre de la funcionalidad 5]**
+   - **Descripción**:  
+   - ✅ *Justificación:*
 
 ---
 
-### ☁️ GitHub y Publicación
+## 🎨 Mejoras en el diseño y estructura
 
-- [x] Repositorio creado en GitHub
-- [x] Archivos subidos correctamente
-- [x] Proyecto publicado con GitHub Pages
-- [x] URL de GitHub Pages incluida en el README
+Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1:
 
----
+1. **[Descripción de mejora 1]**
+   - ✅ *Justificación:*
 
-### 🔤 Google Fonts
-
-- [x] Fuente importada desde Google Fonts en `<head>`
-- [x] Fuente aplicada correctamente
-
-> **📝 Fuente utilizada:** *JetBrains Mono*  
-> **🎯 Motivo:** Fuente moderna, clara y legible, ideal para proyectos de desarrollo.
+2. **[Descripción de mejora 2]**
+   - ✅ *Justificación:*
 
 ---
 
-## 🧱 HTML
+### 📸 Captura comparativa
 
-- [x] Documento con `<!DOCTYPE html>` y `lang="es"`
-- [x] Metaetiquetas `charset` y `viewport`
-- [x] Título descriptivo en la pestaña del navegador
-- [x] Archivos CSS y fuentes correctamente vinculados
+| Antes (PFO1) | Después (PFO2) |
+|--------------|----------------|
+| ![Antes](img/captura-pfo1.png) | ![Después](img/captura-pfo2.png) |
 
-### Estructura mínima:
-
-- [x] Navegación con al menos 3 enlaces
-- [x] Mínimo de 4 comentarios explicativos en el HTML
+> 💡 *Agregá tus capturas a la carpeta `/img/` para mostrar los cambios visuales.*
 
 ---
 
-## 🎨 CSS
+## 🚀 Cómo ver el proyecto
 
-- [x] Estilos personalizados en `styles.css`
-- [x] Uso de selectores por clase e ID
-- [x] Tipografía de Google Fonts aplicada correctamente
-
-### 🌈 Paleta de colores: Catppuccin Mocha
-
-> Este proyecto utiliza la paleta **[Catppuccin Mocha](https://github.com/catppuccin/catppuccin)**, reconocida por su estética suave y coherente para interfaces de desarrolladores.
-
-Colores destacados:
-
-| Nombre     | Hex        |
-|------------|------------|
-| Base       | `#1e1e2e`  |
-| Surface    | `#313244`  |
-| Lavender   | `#b4befe`  |
-| Mauve      | `#cba6f7`  |
-| Pink       | `#f5c2e7`  |
-| Text       | `#cdd6f4`  |
+- **Repositorio**: [GitHub - portfoliopersonal-pfo2](https://github.com/damianclausi/portfoliopersonal-pfo2)
+- **Sitio en vivo**: [GitHub Pages](https://damianclausi.github.io/portfoliopersonal-pfo2/)
 
 ---
 
-### 🔲 Layout
+## 📁 Estructura de carpetas
 
-- [x] Uso de **Flexbox** y **Grid** para organización responsiva
-
-> **¿Qué ventajas encontraste al usar Flexbox o Grid?**  
-> Permiten organizar elementos de forma flexible y responsiva, sin necesidad de cálculos complicados ni media queries adicionales.
-
----
-
-### ✨ Estilo e Interacción
-
-- [x] Botones, enlaces, formularios e imágenes estilizados
-- [x] Uso de unidades relativas (`rem`, `%`, `vh`)
-- [x] Transiciones y efectos hover implementados
-
-> **¿Qué animación o transición aplicaste y por qué?**  
-> Se aplicaron efectos `hover` en tarjetas e imágenes para mejorar la interacción y experiencia visual del usuario.
+```
+portfoliopersonal-pfo2/
+├── index.html
+├── css/
+│   └── styles.css
+├── img/
+│   ├── captura-pfo2.png
+│   └── ...
+├── js/
+│   └── main.js
+└── README.md
+```
 
 ---
 
-## 📱 Responsive Design y Accesibilidad
-
-- [x] Diseño adaptado a diferentes dispositivos (responsive)
-- [x] Uso correcto de `alt` en imágenes
-- [x] Comentarios en el código explicando decisiones de diseño
