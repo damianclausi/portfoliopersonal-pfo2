@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título -->
+    <title>Portafolio Personal</title>
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <!-- Carga la biblioteca de íconos Font Awesome (una web externa) para el contacto de redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+  
+  <body>
+    <header>
+      <h1>Mi Portafolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#tarjetas">Proyectos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#peliculas-favoritas">Películas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <!-- Sección de presentación personal -->
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="contenedor-sobre-mi">
+          <img src="img/avatar.png" alt="Mi avatar" class="avatar-lateral">
+          <div class="descripcion-sobre-mi">
+            <p>Mi nombre es Damián Clausi, soy un apasionado por la tecnología desde muy joven. Disfruto explorando proyectos open source y aprendiendo sobre tecnologías libres. Actualmente me formo para ser desarrollador, explorando distintos campos de la informática. Además, me encanta andar en bicicleta y salir a correr.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- Tarjetas de proyectos desarrollados -->
+      <section id="tarjetas">
+        <h2>Proyectos</h2>
+        <div class="contenedor-tarjetas">
+          <div class="tarjeta">
+            <h3>Actividad de cierre Profesionales tramo 1 – Línea Sarmiento</h3>
+            <!-- Imagen del proyecto -->
+            <a href="https://actividad-profesionales-ls-tramo-1.netlify.app/" target="_blank">
+                <img src="img/captura-simulador-gps-linea-sarmiento.png" alt="Proyecto 1" class="img-proyecto poster-size">
+              </a>                          
+            <p>Este proyecto es una página web diseñada para simular posibles mejoras del sistema interno actual de GPS de Trenes Argentinos, específicamente para la Línea Sarmiento, Ramal Once-Moreno. La página muestra información en tiempo real sobre movimientos de trenes, estado de las vías, trabajos programados y notificaciones de imprevistos operativos.</p>            
+            
+          </div>
+          <div class="tarjeta">
+            <h3>Aplicación Mobile Club Deportivo</h3>           
+            <a href="img/proyecto-2-animado.gif" target="_blank">
+                <img src="img/captura-proyecto2-mobile.png" alt="Proyecto 2" class="img-proyecto poster-size">
+              </a>                        
+            <p>Este proyecto  fue diseñado con mis compañeros Cristian Descosido y Antonio Gill para la materia de Desarrollo de Aplicaciones para Dispositivos Moviles de la Tecnicatura en Desarrollo en Software del IFST 29.  Al hacer clic en la imagen se puede visualizar una animación del flujo completo.</p>                       
+            
+          </div>
+          
+      </section>
+      
+      
+      <!-- Lista de habilidades técnicas -->
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul class="lista-habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>Android Studio</li>
+          <li>Kotlin</li>
+          <li>C#</li>
+          <li>Linux</li>
+          <li>Git</li>
+          <li>Inglés (Competencia básica profesional)</li>
+        </ul>
+      </section>
+      
+      
+      <!-- Sección PELÍCULAS -->
+      <section id="peliculas-favoritas">
+        <h2>Mis películas favoritas</h2>
+        <div class="galeria-posters">
+      
+          <figure>
+            <img src="img/poster-blade-runner.png" alt="Blade Runner">
+            <figcaption>
+              <h3>Blade Runner</h3>
+              <p>Una de las mejores películas de ciencia ficción de todos los tiempos que explora la identidad y el alma en donde los recuerdos pueden ser fabricados.</p>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/poster-tlotr.png" alt="The Lord of the Rings">
+            <figcaption>
+              <h3>The Lord of the Rings</h3>
+              <p>Un relato atemporal sobre la lucha del bien contra el mal, cargado de valor, mitología y paisajes que inspiran aventura.</p>
+            </figcaption>
+          </figure>
+      
+          <figure>
+            <img src="img/poster-ghost-in-the-shell.png" alt="Ghost in the Shell">
+            <figcaption>
+              <h3>Ghost in the Shell</h3>
+              <p>Una obra maestra del anime cyberpunk que cuestiona qué nos hace humanos en un mundo dominado por la tecnología.</p>
+            </figcaption>
+          </figure>
+      
+        </div>
+      </section>
+      
+      
+      
+      <!-- Formulario de contacto para visitantes -->
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form class="formulario-contacto" action="#" method="post">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="campo">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tunombre@correo.com" required>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234 5678">
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribime un mensaje..."></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+      
+      
+    
+    <!-- PIE DE PÁGINA -->
+    <!-- aria-label="GitHub"
+
+    Es un atributo de accesibilidad.
+    
+    Le dice a lectores de pantalla (por ejemplo, para personas ciegas) que este enlace lleva a GitHub, aunque el contenido sea solo un ícono visual.
+    
+    Mejora la usabilidad y accesibilidad web. -->
+    <footer>
+      <p>© 2025 - Mi Portafolio Personal</p>
+      <div class="contact-icons">
+        <a href="https://github.com/damianclausi" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i> <!-- Esto es el ícono de GitHub, gracias a Font Awesome. -->
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>  <!-- Esto es el ícono de LindedIn, gracias a Font Awesome. -->
+          
+
+
+        </a>       
+      </div>
+    </footer>
+
+  </body>
+</html>
