@@ -20,9 +20,12 @@ Este proyecto es una mejora de la landing page desarrollada en la PFO1. En esta 
 
 Se implementarán las siguientes 5 funcionalidades con JavaScript:
 
-1. **[Nombre de la funcionalidad 1]**
-   - **Descripción**:  
-   - ✅ *Justificación:*
+1. **Modo Oscuro/Claro**
+   - **Un botón permite alternar entre el modo claro y oscuro**:  
+   - ✅ *Aporta accesibilidad y personalización visual.*
+   ✅ *Basado en la paleta de colores de [Catppuccin](https://catppuccin.com/), usando el tema* `Mocha` *para modo oscuro y* `Latte` *para modo claro.*
+
+
 
 2. **[Nombre de la funcionalidad 2]**
    - **Descripción**:  

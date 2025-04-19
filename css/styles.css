@@ -1,11 +1,109 @@
-/* base */
-body {
-  font-family: 'JetBrains Mono', monospace;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+/* === 🌙 VARIABLES POR DEFECTO (Modo Oscuro: Catppuccin Mocha) === */
+:root {
+  --color-nav: #b4befe;
+  --color-h1: #b4befe;
+  --color-h2: #b4befe;
+  --color-fondo: #1e1e2e;
+  --color-texto: #cdd6f4;
+  --color-secundario: #313244;
+  --color-acento: #89b4fa;
+  --color-borde: #45475a;
+  --color-hover: #f5c2e7;
+  --color-habilidad: #6c7086;
+  --color-footer: #181825;
+  --color-pelicula: #cba6f7;
+  --color-titulo-proyecto: #b4befe;
+  --color-label: #b4befe;
+  --color-iconos: #b4befe;
+  --color-iconos-hover: #f5c2e7;
+  --color-btn-bg: #b4befe;        
+  --color-btn-text: #1e1e2e;      
+  --color-btn-hover: #f5c2e7;     
 }
 
-/*Layout general */
+/* 🌙 Modo oscuro por defecto, ya definido en :root */
+body.modo-oscuro {
+  /* No hace falta redefinir nada: hereda de :root */
+}
+
+
+/* === ☀️ VARIABLES PARA MODO CLARO (Catppuccin Latte) === */
+body.modo-claro {
+  --color-nav: #1e66f5;
+  --color-h1: #1e66f5;
+  --color-h2: #1e66f5;
+  --color-fondo: #eff1f5;
+  --color-texto: #4c4f69;
+  --color-secundario: #dce0e8;
+  --color-acento: #1e66f5;
+  --color-borde: #acb0be;
+  --color-hover: #7287fd;
+  --color-habilidad: #ccd0da;
+  --color-footer: #e6e9ef;
+  --color-pelicula: #1e66f5;
+  --color-titulo-proyecto: #1e66f5;
+  --color-label: #7287fd;
+  --color-iconos: #1e66f5;
+  --color-iconos-hover: #7287fd;
+  --color-btn-bg: #1e66f5;         /* azul fuerte */
+  --color-btn-text: white;         /* texto blanco */
+  --color-btn-hover: #7287fd;      /* azul claro */
+}
+
+/* === BASE === */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+section,
+header,
+figure {
+  background-color: var(--color-secundario);
+}
+
+header h1 {
+  color: var(--color-h1);
+}
+
+section h2 {
+  color: var(--color-h2);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+nav ul li a {
+  color: var(--color-nav);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--color-hover);
+}
+
+.campo label {
+  color: var(--color-label);
+}
+
+.descripcion-sobre-mi,
+figcaption p,
+footer {
+  color: var(--color-texto);
+}
+
+.tarjeta,
+.campo input,
+.campo textarea {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border-color: var(--color-borde);
+}
+
+/* === LAYOUT === */
 main {
   padding: 20px;
   max-width: 1100px;
@@ -14,24 +112,11 @@ main {
 
 section {
   margin-bottom: 40px;
-  background-color: #313244;
   padding: 20px;
   border-radius: 8px;
-  
 }
 
-section h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #b4befe;
-  margin-bottom: 20px;
-  font-weight: 700;  
-}
-
-/*Navegación */
 header {
-  background-color: #313244;
-  color: #b4befe;
   padding: 20px;
   text-align: center;
 }
@@ -46,34 +131,22 @@ nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
-  color: #b4befe;
-  text-decoration: none;
-  font-weight: 700;
+/* === SOBRE MÍ === */
+.avatar, .avatar-lateral {
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-nav ul li a:hover {
-  color: #f5c2e7;
-}
-
-
-/*Avatar y Sobre mí */
 .avatar {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;  
+  margin: 0 auto 20px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .avatar-lateral {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
-  object-fit: cover;    
 }
 
 .contenedor-sobre-mi {
@@ -87,10 +160,9 @@ nav ul li a:hover {
 .descripcion-sobre-mi {
   flex: 1;
   font-size: 1rem;
-  color: #cdd6f4;
 }
 
-/* Proyectos */
+/* === PROYECTOS === */
 .contenedor-tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -105,26 +177,28 @@ nav ul li a:hover {
   justify-content: center;
 }
 
-
 .tarjeta {
-  background-color: #1e1e2e;
   padding: 20px;
-  border-radius: 12px;  
+  border-radius: 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+}
+
+.tarjeta h3 {
+  color: var(--color-titulo-proyecto);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .tarjeta:hover {
-  
   box-shadow: 0 6px 25px rgba(245, 194, 231, 0.4);
 }
 
 .tarjeta a:hover img {
-  transform: scale(1.03);  
-  
+  transform: scale(1.03);
 }
 
 .img-proyecto {
@@ -136,12 +210,11 @@ nav ul li a:hover {
 
 .poster-size {
   max-width: 280px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: block;
 }
 
-/* Habilidades */
+/* === HABILIDADES === */
 .lista-habilidades {
   list-style: none;
   padding: 0;
@@ -153,23 +226,19 @@ nav ul li a:hover {
 }
 
 .lista-habilidades li {
-  background-color: #45475a;
-  color: #f5e0dc;
   padding: 10px 16px;
   border-radius: 20px;
+  background-color: var(--color-habilidad);
+  color: var(--color-texto);
   font-size: 0.9rem;
   font-weight: 400;
-  
 }
 
 .lista-habilidades li:hover {
-  
-  box-shadow: 0 4px 12px rgba(245, 194, 231, 0.3);
-  background-color: #6c7086;
+  background-color: var(--color-hover);
 }
 
-
-/*Películas */
+/* === PELÍCULAS === */
 #peliculas-favoritas {
   text-align: center;
   margin-top: 60px;
@@ -183,9 +252,8 @@ nav ul li a:hover {
 }
 
 figure {
-  background-color: #313244;
   padding: 20px;
-  border-radius: 12px;      
+  border-radius: 12px;
 }
 
 figure:hover {
@@ -200,21 +268,14 @@ figure img {
 }
 
 figcaption h3 {
-  color: #cba6f7;
+  color: var(--color-pelicula);
   font-size: 1.1rem;
-  margin: 0;
   font-weight: 700;
+  margin: 0;
   text-align: center;
 }
 
-figcaption p {
-  color: #cdd6f4;
-  font-size: 0.9rem;
-  margin-top: 8px;
-  text-align: center;
-}
-
-/*Contacto */
+/* === FORMULARIO === */
 #contacto {
   text-align: center;
 }
@@ -234,19 +295,10 @@ figcaption p {
   text-align: left;
 }
 
-.campo label {
-  font-weight:700;
-  color: #b4befe;
-  margin-bottom: 6px;
-}
-
 .campo input,
 .campo textarea {
-  background-color: #1e1e2e;
-  color: #f5e0dc;
-  border: 1px solid #45475a;
-  border-radius: 8px;
   padding: 10px;
+  border-radius: 8px;
   font-family: 'JetBrains Mono', monospace;
   resize: vertical;
 }
@@ -258,53 +310,86 @@ figcaption p {
   box-shadow: 0 0 8px rgba(203, 166, 247, 0.4);
 }
 
-button[type="submit"] {
-  background-color: #b4befe;
-  color: #1e1e2e;
+/* === BOTÓN DE ENVÍO === */
+.btn-enviar {
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
-  font-weight: 700;  
-  cursor: pointer;  
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-  background-color: #f5c2e7;
+.btn-enviar:hover {
+  background-color: var(--color-btn-hover);
 }
 
+/* === CAMBIO DE TEMA === */
+#btn-tema {
+  font-size: 48px;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-/* Footer */
+#btn-tema:hover {
+  background-color: var(--color-btn-hover);
+  transform: scale(1.05);
+}
+
+/* === HOVER TARJETAS EN MODO CLARO === */
+body.modo-claro .tarjeta:hover,
+body.modo-claro figure:hover {
+  background-color: rgba(114, 135, 253, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(30, 102, 245, 0.15);
+  transition: all 0.25s ease;
+}
+
+/* === FOOTER === */
 footer {
-  background-color: #181825;
-  color: #cdd6f4;
+  background-color: var(--color-footer);
+  color: var(--color-texto);
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   margin-top: 40px;
+  font-size: 1rem;
 }
 
-footer a {
-  color: #f5e0dc;
-  margin: 0 10px;
-  text-decoration: none;
+footer p {
+  margin: 0;
+  font-weight: 500;
 }
 
-footer a:hover {
-  color: #b4befe;
-}
-
+/* === ICONOS REDES SOCIALES === */
 .contact-icons {
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 12px;
 }
 
 .contact-icons a {
-  color: #b4befe;
-  margin: 0 12px;
-  font-size: 44px;  
-  transition: color 0.3s ease; /* Agrega una transición suave al cambiar de colorr*/
+  color: var(--color-iconos);
+  font-size: 48px;
+  transition: color 0.3s ease;
 }
 
-.contact-icons a:hover {  
-  color: #f5e0dc;
+.contact-icons a:hover {
+  color: var(--color-iconos-hover);
 }
 
-
+.contact-icons a i {
+  color: inherit;
+}
