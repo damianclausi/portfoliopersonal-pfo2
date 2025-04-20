@@ -328,6 +328,9 @@ figcaption h3 {
 
 /* === CAMBIO DE TEMA === */
 #btn-tema {
+  position: fixed; 
+  top: 1rem;
+  right: 1rem;
   font-size: 48px;
   background-color: var(--color-btn-bg);
   color: var(--color-btn-text);
@@ -341,7 +344,9 @@ figcaption h3 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000; /* Para asegurar que quede encima de todo */
 }
+
 
 #btn-tema:hover {
   background-color: var(--color-btn-hover);
