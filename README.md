@@ -27,9 +27,9 @@ Se implementarán las siguientes 5 funcionalidades con JavaScript:
 
 
 
-2. **[Nombre de la funcionalidad 2]**
-   - **Descripción**:  
-   - ✅ *Justificación:*
+2. **Pop-up de Confirmación de Envío**
+   - **Al enviar correctamente el formulario, aparece un mensaje de confirmación.**  
+   - ✅ *Brinda retroalimentación inmediata al usuario.*
 
 3. **[Nombre de la funcionalidad 3]**
    - **Descripción**:  
