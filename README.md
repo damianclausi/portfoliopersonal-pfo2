@@ -50,8 +50,11 @@ Se implementarán las siguientes 5 funcionalidades con JavaScript:
 
 Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1:
 
-1. **[Descripción de mejora 1]**
-   - ✅ *Justificación:*
+1. **Optimización de imágenes**
+  - Se redujo el tamaño de las imágenes utilizadas en el sitio en un 79% utilizando la herramienta [imgto.xyz](https://imgto.xyz/)
+  - Se redujo un 52.11% al archivo gif demostrativo de la  Aplicación Mobile Club Deportivo con la herramiente [ezgif.com](https://ezgif.com/)
+  - ✅ *Mejora significativamente el tiempo de carga del sitio, optimiza el rendimiento y mejora la experiencia en dispositivos móviles.*
+
 
 2. **[Descripción de mejora 2]**
    - ✅ *Justificación:*
