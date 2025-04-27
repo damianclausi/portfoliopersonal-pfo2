@@ -11,8 +11,8 @@ Este proyecto es una mejora de la landing page desarrollada en la PFO1. En esta 
 ---
 
 👤 **Alumno:** Damián Clausi  
-🧑‍🏫 **Profesor:** Luciano Martinez  
 📚 **Comisión:** D  
+🧑‍🏫 **Profesor:** Luciano Martinez  
 
 ---
 
@@ -65,38 +65,28 @@ Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1
 3. **Fondo dinámico animado con partículas**
   - Se agregó un fondo con degradado radial animado combinado con partículas dinámicas tipo constelaciones, utilizando la librería `tsParticles`.
   - ✅ *Aporta modernidad visual y movimiento sutil sin afectar la legibilidad.*
----
 
+
+4. **Mejor estructuración del código CSS**
+   - Se reorganizaron los estilos de `styles.css` separándolos en secciones bien definidas y comentadas, mejorando la legibilidad y la facilidad de mantenimiento del código.git
+   - ✅ *Facilita la edición, el mantenimiento futuro y mejora la calidad general del proyecto.*
+
+---
 ### 📸 Captura comparativa
 
 | Antes (PFO1) | Después (PFO2) |
 |--------------|----------------|
 | ![Antes](img/captura-pfo1.png) | ![Después](img/captura-pfo2.png) |
 
-
 ---
 
 ## 🚀 Cómo ver el proyecto
 
-- **Repositorio**: [GitHub - portfoliopersonal-pfo2](https://github.com/damianclausi/portfoliopersonal-pfo2)
-- **Sitio en vivo**: [GitHub Pages](https://damianclausi.github.io/portfoliopersonal-pfo2/)
+- 📁 [Repositorio en GitHub PFO2](https://github.com/damianclausi/portfoliopersonal-pfo2)
+- 🌍 [Sitio en GitHub Pages PFO2](https://damianclausi.github.io/portfoliopersonal-pfo2/)
 
 ---
 
-## 📁 Estructura de carpetas
-
-```
-portfoliopersonal-pfo2/
-├── index.html
-├── css/
-│   └── styles.css
-├── img/
-│   ├── captura-pfo2.png
-│   └── ...
-├── js/
-│   └── main.js
-└── README.md
-```
-
----
+- 📁 [Repositorio en GitHub PFO1](https://github.com/damianclausi/portfoliopersonal)  
+- 🌍 [Sitio en GitHub Pages PFO1](https://damianclausi.github.io/portfoliopersonal/)  
 
