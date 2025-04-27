@@ -66,4 +66,37 @@ document.addEventListener("DOMContentLoaded", () => {
             formulario.reset();
         });
     }
+
+    // ==========================
+    // Tercera funcionalidad: Temporizador de tiempo restante
+    // ==========================
+
+    // Función para actualizar el temporizador
+    function actualizarTemporizador() {
+        const fechaLimite = new Date("2025-05-05T23:59:00"); // FECHA LÍMITE        
+        const ahora = new Date();
+        const diferencia = fechaLimite - ahora;
+
+        const tiempoRestante = document.getElementById("tiempo-restante");
+
+        if (diferencia <= 0) {
+            tiempoRestante.textContent = "¡Finalizado!";
+            clearInterval(intervaloTemporizador); // Detener el temporizador
+            return;
+        }
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        tiempoRestante.textContent = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    }
+
+    // Llamar la función cada segundo
+    const intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
+
+    // Actualizar una vez apenas se cargue la página
+    actualizarTemporizador();
+
 });

@@ -398,3 +398,12 @@ footer p {
 .contact-icons a i {
   color: inherit;
 }
+
+/* === TEMPORIZADOR === */
+.temporizador {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-h1); /* mismo color que el título */
+}
+
