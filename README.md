@@ -31,9 +31,10 @@ Se implementarán las siguientes 5 funcionalidades con JavaScript:
    - **Al enviar correctamente el formulario, aparece un mensaje de confirmación.**  
    - ✅ *Brinda retroalimentación inmediata al usuario.*
 
-3. **[Nombre de la funcionalidad 3]**
-   - **Descripción**:  
-   - ✅ *Justificación:*
+3. **Temporizador de Tiempo Restante para la Entrega**
+    - **Un contador visible muestra los días, horas, minutos y segundos restantes hasta la fecha límite de entrega.**  
+    - ✅ *Facilita el seguimiento del tiempo disponible.*
+
 
 4. **[Nombre de la funcionalidad 4]**
    - **Descripción**:  
