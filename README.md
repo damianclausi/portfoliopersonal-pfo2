@@ -26,7 +26,6 @@ Se implementarán las siguientes 5 funcionalidades con JavaScript:
    - ✅ *Basado en la paleta de colores de [Catppuccin](https://catppuccin.com/), usando el tema* `Mocha` *para modo oscuro y* `Latte` *para modo claro.*
 
 
-
 2. **Pop-up de Confirmación de Envío**
    - **Al enviar correctamente el formulario, aparece un mensaje de confirmación.**  
    - ✅ *Brinda retroalimentación inmediata al usuario.*
@@ -41,9 +40,9 @@ Se implementarán las siguientes 5 funcionalidades con JavaScript:
     - ✅ *Aporta dinamismo visual, haciendo que los elementos respondan de forma atractiva a la interacción del usuario (por ejemplo, escalados suaves al pasar el mouse).*
 
 
-5. **[Nombre de la funcionalidad 5]**
-   - **Descripción**:  
-   - ✅ *Justificación:*
+5. **Creación dinámica de la lista de habilidades**
+    - **Se generó dinámicamente el contenido de la sección Habilidades utilizando un array en JavaScript.**  
+    - ✅ *Mejora la escalabilidad y organización del contenido, facilitando futuras actualizaciones sin necesidad de editar el HTML manualmente.*
 
 ---
 

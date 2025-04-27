@@ -213,4 +213,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // ==========================
+    // Quinta funcionalidad: Creación dinámica de la lista de habilidades
+    // ==========================
+
+    // Definir las habilidades en un array
+    const habilidades = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SQL",
+        "Python",
+        "Java",
+        "Android Studio",
+        "Kotlin",
+        "C#",
+        "Linux",
+        "Git",
+        "Inglés (Competencia básica profesional)"
+    ];
+
+    // Obtener el contenedor de la lista de habilidades
+    const listaHabilidades = document.querySelector(".lista-habilidades");
+
+    // Generar cada habilidad como un <li> dinámicamente
+    habilidades.forEach(habilidad => {
+        const li = document.createElement("li");    // Crear un nuevo <li>
+        li.textContent = habilidad;                 // Asignar el texto
+        listaHabilidades.appendChild(li);            // Insertarlo en la lista
+    });
+
 });
