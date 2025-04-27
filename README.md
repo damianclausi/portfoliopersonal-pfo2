@@ -58,7 +58,7 @@ Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1
 
 2. **Rediseño del Header y navegación**
    - Se implementó un header fijo y transparente que se mantiene visible durante toda la navegación, mejorando la accesibilidad y experiencia de usuario.
-   - El título del sitio fue reemplazado por el nombre "DAMIAN CLAUSI" para una presentación más profesional.
+   - El título del sitio fue reemplazado por mi nombre "DAMIAN CLAUSI" para una presentación más profesional.
    - Se adaptaron los colores de la navegación según el modo claro/oscuro para asegurar una correcta visibilidad.
    - ✅ *Mejora la navegación, la estética visual y la accesibilidad en ambos modos de visualización.*
 
