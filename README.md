@@ -36,9 +36,10 @@ Se implementarán las siguientes 5 funcionalidades con JavaScript:
     - ✅ *Facilita el seguimiento del tiempo disponible.*
 
 
-4. **[Nombre de la funcionalidad 4]**
-   - **Descripción**:  
-   - ✅ *Justificación:*
+4. **Animaciones Dinámicas en Tarjetas, Posters y Botones**
+    - **Se utilizará JavaScript para agregar animaciones dinámicas a elementos interactivos como las tarjetas de proyectos, los posters de películas y los botones.**  
+    - ✅ *Aporta dinamismo visual, haciendo que los elementos respondan de forma atractiva a la interacción del usuario (por ejemplo, escalados suaves al pasar el mouse).*
+
 
 5. **[Nombre de la funcionalidad 5]**
    - **Descripción**:  

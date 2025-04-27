@@ -99,4 +99,53 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualizar una vez apenas se cargue la página
     actualizarTemporizador();
 
+     // ==========================
+    // Cuarta funcionalidad: Animaciones dinámicas en tarjetas, botones y posters
+    // ==========================
+
+    // Animar las tarjetas de proyectos
+    const tarjetas = document.querySelectorAll(".tarjeta");
+
+    tarjetas.forEach(tarjeta => {
+        tarjeta.addEventListener("mouseover", () => {
+            tarjeta.style.transform = "scale(1.05)";
+            tarjeta.style.transition = "transform 0.3s ease";
+        });
+        tarjeta.addEventListener("mouseout", () => {
+            tarjeta.style.transform = "scale(1)";
+        });
+    });
+
+    // Animar los posters de películas (figures)
+    const posters = document.querySelectorAll("#peliculas-favoritas figure");
+
+    posters.forEach(poster => {
+        poster.addEventListener("mouseover", () => {
+            poster.style.transform = "scale(1.05)";
+            poster.style.transition = "transform 0.3s ease";
+        });
+        poster.addEventListener("mouseout", () => {
+            poster.style.transform = "scale(1)";
+        });
+    });
+
+    // Animar los botones
+    const botones = document.querySelectorAll("button");
+
+    botones.forEach(boton => {
+        boton.addEventListener("mouseover", () => {
+            boton.style.transform = "scale(1.1)";
+            boton.style.transition = "transform 0.2s ease";
+        });
+        boton.addEventListener("mouseout", () => {
+            boton.style.transform = "scale(1)";
+        });
+    });
+
+
+
+
+
+
+
 });
