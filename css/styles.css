@@ -47,6 +47,24 @@ body.modo-claro {
   --color-btn-hover: #7287fd;
 }
 
+/* === AJUSTES HOVER FIGURE EN MODO CLARO === */
+body.modo-claro figure:hover {
+  background-color: rgba(114, 135, 253, 0.12); /* Fondo azul clarito */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(30, 102, 245, 0.25); /* Sombra azul más visible */
+  transition: all 0.25s ease;
+}
+
+/* === AJUSTES HOVER TARJETA EN MODO CLARO === */
+body.modo-claro .tarjeta:hover {
+  background-color: rgba(114, 135, 253, 0.12); /* Fondo azul muy suave */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(30, 102, 245, 0.25); /* Sombra azul clarita */
+  transition: all 0.25s ease;
+}
+
+
+
 /* === BASE GENERAL === */
 body {
   font-family: 'JetBrains Mono', monospace;
