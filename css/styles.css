@@ -21,11 +21,8 @@
   --color-btn-hover: #f5c2e7;     
 }
 
-/* 🌙 Modo oscuro por defecto, ya definido en :root */
-body.modo-oscuro {
-  /* No hace falta redefinir nada: hereda de :root */
-}
-
+/* 🌙 Modo oscuro por defecto */
+body.modo-oscuro {}
 
 /* === ☀️ VARIABLES PARA MODO CLARO (Catppuccin Latte) === */
 body.modo-claro {
@@ -45,25 +42,23 @@ body.modo-claro {
   --color-label: #7287fd;
   --color-iconos: #1e66f5;
   --color-iconos-hover: #7287fd;
-  --color-btn-bg: #1e66f5;         /* azul fuerte */
-  --color-btn-text: white;         /* texto blanco */
-  --color-btn-hover: #7287fd;      /* azul claro */
+  --color-btn-bg: #1e66f5;
+  --color-btn-text: white;
+  --color-btn-hover: #7287fd;
 }
 
-/* === BASE === */
+/* === BASE GENERAL === */
 body {
   font-family: 'JetBrains Mono', monospace;
   background-color: var(--color-fondo);
   color: var(--color-texto);
 }
 
-section,
-header,
-figure {
+section, header, figure {
   background-color: var(--color-secundario);
 }
 
-header h1 {
+header h1, .logo {
   color: var(--color-h1);
 }
 
@@ -89,15 +84,11 @@ nav ul li a:hover {
   color: var(--color-label);
 }
 
-.descripcion-sobre-mi,
-figcaption p,
-footer {
+.descripcion-sobre-mi, figcaption p, footer {
   color: var(--color-texto);
 }
 
-.tarjeta,
-.campo input,
-.campo textarea {
+.tarjeta, .campo input, .campo textarea {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   border-color: var(--color-borde);
@@ -108,6 +99,7 @@ main {
   padding: 20px;
   max-width: 1100px;
   margin: 0 auto;
+  padding-top: 120px;
 }
 
 section {
@@ -124,11 +116,8 @@ header {
 nav ul {
   list-style: none;
   padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+  display: flex;
+  gap: 20px;
 }
 
 /* === SOBRE MÍ === */
@@ -295,16 +284,14 @@ figcaption h3 {
   text-align: left;
 }
 
-.campo input,
-.campo textarea {
+.campo input, .campo textarea {
   padding: 10px;
   border-radius: 8px;
   font-family: 'JetBrains Mono', monospace;
   resize: vertical;
 }
 
-.campo input:focus,
-.campo textarea:focus {
+.campo input:focus, .campo textarea:focus {
   outline: none;
   border-color: #cba6f7;
   box-shadow: 0 0 8px rgba(203, 166, 247, 0.4);
@@ -328,7 +315,7 @@ figcaption h3 {
 
 /* === CAMBIO DE TEMA === */
 #btn-tema {
-  position: fixed; 
+  position: fixed;
   top: 1rem;
   right: 1rem;
   font-size: 48px;
@@ -344,22 +331,67 @@ figcaption h3 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1000; /* Para asegurar que quede encima de todo */
+  z-index: 1000;
 }
-
 
 #btn-tema:hover {
   background-color: var(--color-btn-hover);
   transform: scale(1.05);
 }
 
-/* === HOVER TARJETAS EN MODO CLARO === */
-body.modo-claro .tarjeta:hover,
-body.modo-claro figure:hover {
-  background-color: rgba(114, 135, 253, 0.12);
-  transform: translateY(-4px);
-  box-shadow: 0 6px 24px rgba(30, 102, 245, 0.15);
-  transition: all 0.25s ease;
+/* === FONDO ANIMADO === */
+.fondo-animado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #a78bfa, #7c3aed, #6b21a8);
+  background-size: 200% 200%;
+  animation: moverFondo 15s ease infinite;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(80px);
+}
+
+@keyframes moverFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === HEADER FIJO Y TRANSPARENTE === */
+.header-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(30, 30, 46, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+body.modo-claro .header-fijo {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+body.modo-claro nav ul li a {
+  color: #1e1e2e;
+}
+
+body.modo-claro nav ul li a:hover {
+  color: var(--color-hover);
+}
+
+.contenedor-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* === FOOTER === */
@@ -404,99 +436,5 @@ footer p {
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--color-h1); /* mismo color que el título */
-}
-
-/* === CANVAS DE PARTICULAS PARA TENER DE FONDO === */
-#tsparticles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-
-/* === HEADER FIJO Y TRANSPARENTE === */
-.header-fijo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(30, 30, 46, 0.6); /* Fondo oscuro semitransparente para modo oscuro */
-  backdrop-filter: blur(8px);
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-/* Fondo diferente en modo claro */
-body.modo-claro .header-fijo {
-  background: rgba(255, 255, 255, 0.8); /* Fondo claro semitransparente para modo claro */
-  backdrop-filter: blur(8px);
-}
-
-.contenedor-header {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo del portfolio */
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
   color: var(--color-h1);
-}
-
-/* Botón de cambio de tema */
-#btn-tema {
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-btn-text);
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-
-#btn-tema:hover {
-  transform: scale(1.2);
-}
-
-/* Menú de navegación */
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: var(--color-nav);
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: var(--color-hover);
-}
-
-/* Ajuste para que el contenido no quede tapado */
-main {
-  padding-top: 120px; /* Dejar espacio para el header fijo */
-}
-
-
-/* === CAMBIO DE COLOR EN NAVEGACIÓN PARA MODO CLARO (más contraste) === */
-body.modo-claro nav ul li a {
-  color: #1e1e2e; /* Texto muy oscuro para que se vea fuerte */
-}
-
-body.modo-claro nav ul li a:hover {
-  color: var(--color-hover); /* Azul clarito al hacer hover */
 }
