@@ -407,3 +407,12 @@ footer p {
   color: var(--color-h1); /* mismo color que el título */
 }
 
+/* === CANVAS DE PARTICULAS PARA TENER DE FONDO === */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

@@ -2,6 +2,9 @@
 // Funcionalidades implementadas:
 // 1. Primera funcionalidad: Cambio de tema (Modo Oscuro/Claro)
 // 2. Segunda funcionalidad: Pop-up de confirmación al enviar el formulario de contacto
+// 3. Tercera funcionalidad: Temporizador de tiempo restante
+// 4. Cuarta funcionalidad: Animaciones dinámicas en tarjetas, botones y posters
+// 5. Quinta funcionalidad: Partículas dinámicas que cambian según el tema
 
 // Esperar a que el contenido del documento HTML esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,28 +20,97 @@ document.addEventListener("DOMContentLoaded", () => {
     const temaGuardado = localStorage.getItem("tema");
 
     // Si el usuario eligió previamente el modo claro
-    if (temaGuardado === "claro") {      
-        document.body.classList.add("modo-claro"); // Activar modo claro      
+    if (temaGuardado === "claro") {
+        document.body.classList.add("modo-claro");
         btnTema.textContent = "🌙"; // Cambiar el texto del botón para indicar que puede volver al modo oscuro
     } else {
         // Si no hay tema guardado o era oscuro, aplicar modo oscuro por defecto
-        document.body.classList.add("modo-oscuro");      
+        document.body.classList.add("modo-oscuro");
         btnTema.textContent = "☀️"; // Cambiar el texto del botón para indicar que puede pasar a modo claro
     }
 
+    // ==========================
+    // Función para inicializar las partículas con el color adecuado
+    // ==========================
+
+    function inicializarParticulas() {
+        let colorParticulas = "#ffffff"; // Por defecto, blanco
+        if (document.body.classList.contains("modo-claro")) {
+            colorParticulas = "#1e1e2e"; // Gris oscuro en modo claro
+        }
+
+        tsParticles.load("tsparticles", {
+            fullScreen: { enable: true, zIndex: -1 },
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        area: 800
+                    }
+                },
+                color: { value: colorParticulas },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 2, random: true },
+                links: {
+                    enable: true,
+                    distance: 150,
+                    color: colorParticulas,
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    outModes: {
+                        default: "out"
+                    }
+                }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    }
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { quantity: 4 }
+                }
+            },
+            background: {
+                color: "transparent"
+            }
+        });
+    }
+
+    // Inicializar partículas según el tema al cargar
+    inicializarParticulas();
+
     // Escuchar el clic en el botón para cambiar el tema
     btnTema.addEventListener("click", () => {
-        // Si actualmente está en modo oscuro
-        if (document.body.classList.contains("modo-oscuro")) {        
-            document.body.classList.replace("modo-oscuro", "modo-claro"); // Cambiar a modo claro        
-            localStorage.setItem("tema", "claro"); // Guardar la preferencia en el navegador        
+        if (document.body.classList.contains("modo-oscuro")) {
+            document.body.classList.replace("modo-oscuro", "modo-claro"); // Cambiar a modo claro
+            localStorage.setItem("tema", "claro"); // Guardar la preferencia
             btnTema.textContent = "🌙"; // Cambiar el texto del botón
         } else {
-            // Si está en modo claro, cambiar a modo oscuro
-            document.body.classList.replace("modo-claro", "modo-oscuro");        
-            localStorage.setItem("tema", "oscuro"); // Guardar la preferencia        
+            document.body.classList.replace("modo-claro", "modo-oscuro"); // Cambiar a modo oscuro
+            localStorage.setItem("tema", "oscuro"); // Guardar la preferencia
             btnTema.textContent = "☀️"; // Cambiar el texto del botón
         }
+
+        // Volver a cargar las partículas con el nuevo color
+        tsParticles.dom().forEach(instance => instance.destroy()); // Eliminar partículas existentes
+        inicializarParticulas(); // Volver a crear partículas con nuevo color
     });
 
     // ==========================
@@ -73,10 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para actualizar el temporizador
     function actualizarTemporizador() {
-        const fechaLimite = new Date("2025-05-05T23:59:00"); // FECHA LÍMITE        
+        const fechaLimite = new Date("2025-05-05T23:59:00"); // FECHA LÍMITE
         const ahora = new Date();
         const diferencia = fechaLimite - ahora;
-
         const tiempoRestante = document.getElementById("tiempo-restante");
 
         if (diferencia <= 0) {
@@ -99,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualizar una vez apenas se cargue la página
     actualizarTemporizador();
 
-     // ==========================
+    // ==========================
     // Cuarta funcionalidad: Animaciones dinámicas en tarjetas, botones y posters
     // ==========================
 
@@ -141,11 +212,5 @@ document.addEventListener("DOMContentLoaded", () => {
             boton.style.transform = "scale(1)";
         });
     });
-
-
-
-
-
-
 
 });

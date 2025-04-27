@@ -57,6 +57,9 @@ Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1
 2. **[Descripción de mejora 2]**
    - ✅ *Justificación:*
 
+- **Fondo dinámico animado con partículas**
+  - Se agregó un fondo con degradado radial animado combinado con partículas dinámicas tipo constelaciones, utilizando la librería `tsParticles`.
+  - ✅ *Aporta modernidad visual y movimiento sutil sin afectar la legibilidad.*
 ---
 
 ### 📸 Captura comparativa
