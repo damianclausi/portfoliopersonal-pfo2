@@ -56,10 +56,13 @@ Se aplicarán al menos dos mejoras estructurales o estéticas respecto a la PFO1
   - ✅ *Mejora significativamente el tiempo de carga del sitio, optimiza el rendimiento y mejora la experiencia en dispositivos móviles.*
 
 
-2. **[Descripción de mejora 2]**
-   - ✅ *Justificación:*
+2. **Rediseño del Header y navegación**
+   - Se implementó un header fijo y transparente que se mantiene visible durante toda la navegación, mejorando la accesibilidad y experiencia de usuario.
+   - El título del sitio fue reemplazado por el nombre "DAMIAN CLAUSI" para una presentación más profesional.
+   - Se adaptaron los colores de la navegación según el modo claro/oscuro para asegurar una correcta visibilidad.
+   - ✅ *Mejora la navegación, la estética visual y la accesibilidad en ambos modos de visualización.*
 
-- **Fondo dinámico animado con partículas**
+3. **Fondo dinámico animado con partículas**
   - Se agregó un fondo con degradado radial animado combinado con partículas dinámicas tipo constelaciones, utilizando la librería `tsParticles`.
   - ✅ *Aporta modernidad visual y movimiento sutil sin afectar la legibilidad.*
 ---
